@@ -1,0 +1,48 @@
+
+{% extends 'base.html' %}
+
+
+
+{% block header %}
+<h1 align='center' margin-bottom='20px'> Текущие параметры</h1>
+{% endblock header %}
+
+{% block content %}
+{% load static %}
+
+
+<div class='container-fluid'>
+    <table align='center'>
+        <tr>
+            <th >Название</th>
+            <th > P1  </th>
+            <th > P2  </th>
+            <th > T1  </th>
+            <th > T2  </th>
+        </tr>
+        {% for id in objs %}
+        <tr id={{id}}>
+            <td  class='name bg-warning'></td>
+            <td  class='p1'></td>
+            <td  class='p2'></td>
+            <td  class='t1'></td>
+            <td  class='t2'></td> 
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+<h1 id='2'>Обновить</h1>
+ <form action="{%url 'currData'%}" method="post" id='form'>{% csrf_token %}
+  <p><input type="text" name="str"></p>
+  <p><input type="submit" value="Отправить"></p>
+    <ul id='list'></ul>
+
+ </form>   
+
+{% endblock content %}
+
+{% block _scripts %}
+ <script src="{%static 'script.js'%}"></script>
+{% endblock _scripts %}
+

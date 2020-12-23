@@ -1,0 +1,27 @@
+.title {
+    color: brown;
+    text-align: center;
+}
+
+.table-parametr{
+    box-align:center;
+}
+
+TABLE {
+    border-collapse: collapse; /* Убираем двойные линии между ячейками */
+    width: 30em; /* Ширина таблицы */
+   }
+   TH, TD {
+    border: 1px solid black; /* Параметры рамки */
+    text-align: center; /* Выравнивание по центру */
+    padding: 1px; /* Поля вокруг текста */
+    height: 1em;
+    width: 6rem;
+   }
+   TH {
+    background: rgb(214, 191, 141); /* Цвет фона ячейки */
+    height: 1.5rem; /* Высота ячеек */
+    vertical-align: bottom; /* Выравнивание по нижнему краю */
+    padding: 0; /* Убираем поля вокруг текста */
+    
+   }
